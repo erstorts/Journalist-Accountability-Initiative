@@ -1,9 +1,11 @@
 import React from 'react';
+import SupportForm from './SupportForm';
 
 function Support(props) {
     return (
-        <div>
-            <h1>Support</h1>
+        <div className='container'>
+            <h1>We are hard at work developing the best platform for you.</h1>
+            <SupportForm />
         </div>
     );
 }

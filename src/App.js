@@ -12,7 +12,7 @@ function App() {
       <main className="content">
         <Routes>
           <Route path="/support" element={<Support />} />
-          <Route path="/get-bias" element={<GetBias />} />
+          <Route path="/" element={<GetBias />} />
         </Routes>
       </main>
     </BrowserRouter>);
