@@ -3,24 +3,34 @@ import Input from "../common/input"
 
 function BiasForm({getURL}) {
 
-    const [userInput, setUserInput] = useState("")
+    const [emailInput, setEmailInput] = useState("")
+    const [articleInput, setArticleInput] = useState("")
     
     const doSubmit = (event) => {
         console.log("Submit")
         event.preventDefault()
-        setUserInput(userInput) 
-        getURL(userInput)
-        console.log(userInput)
+        setArticleInput(articleInput) 
+        setEmailInput(emailInput)
+        getURL(articleInput)
+        console.log(emailInput, articleInput)
     }
+
 
     return (
             <div>
                 <form onSubmit={doSubmit}>
+                    <Input
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        label="Submit you email & aritcle to see bias."
+                        onChange={event => setEmailInput(event.target.value)}
+                        error="" />
                     <Input type="text"
                         placeholder="Article URL"
                         name="url"
-                        label="Submit an article to see the bias."
-                        onChange={event => setUserInput(event.target.value)}
+                        label=""
+                        onChange={event => setArticleInput(event.target.value)}
                         error="" />
                     <button className="btn btn-warning mt-2">{"Get Bias"}</button>
                 </form>

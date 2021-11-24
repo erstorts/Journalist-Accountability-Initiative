@@ -8,7 +8,9 @@ function GetBias(props) {
 
     const getURL = (data) => {
         console.log(data)
-        setURL("Your Bias is Left.")
+        const biasOptions = ['Left', 'Lean Left', 'Center', 'Lean Right', 'Right']
+        const biasOutput = biasOptions[Math.floor(Math.random() * biasOptions.length)];
+        setURL(`This article's bias is ${biasOutput}`)
     }
 
     return (
