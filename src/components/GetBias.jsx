@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import fire from "../images/fire-newspaper.jpeg"
+import fire from "../images/fire-newspaper.webp"
 import BiasForm from './BiasForm';
 
 function GetBias(props) {
