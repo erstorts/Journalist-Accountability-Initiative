@@ -15,6 +15,12 @@ function BiasForm({getURL}) {
         console.log(emailInput, articleInput)
     }
 
+    const validate = () => {
+        if (emailInput.length > 0 && articleInput.length > 0) {
+            return false
+        }
+        return true
+    }
 
     return (
             <div>
@@ -32,7 +38,7 @@ function BiasForm({getURL}) {
                         label=""
                         onChange={event => setArticleInput(event.target.value)}
                         error="" />
-                    <button className="btn btn-warning mt-2">{"Get Bias"}</button>
+                    <button disabled={validate()} className="btn btn-warning mt-2">{"Get Bias"}</button>
                 </form>
             </div>
     );
