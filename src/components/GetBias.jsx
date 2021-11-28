@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
-//import fire from "../images/fire-newspaper.webp"
 import BiasForm from './BiasForm';
+import APIWrapper from "../services/API"
 
 function GetBias(props) {
+
+    const API = new APIWrapper()
+    
+    async function test() {
+        const response = await API.get('/users')
+        console.log(response)
+    }
+
+    test()
 
     const [url, setURL] = useState("")
 

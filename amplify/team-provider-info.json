@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jai-dev-130323-authRole",
+      "UnauthRoleArn": "arn:aws:iam::938398630709:role/amplify-jai-dev-130323-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::938398630709:role/amplify-jai-dev-130323-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-jai-dev-130323-deployment",
+      "UnauthRoleName": "amplify-jai-dev-130323-unauthRole",
+      "StackName": "amplify-jai-dev-130323",
+      "StackId": "arn:aws:cloudformation:us-east-2:938398630709:stack/amplify-jai-dev-130323/dd55bb00-507d-11ec-98c0-0a98e0e83964",
+      "AmplifyAppId": "d3g0xqp1ppxdmy"
+    },
+    "categories": {
+      "function": {
+        "jai": {
+          "deploymentBucketName": "amplify-jai-dev-130323-deployment",
+          "s3Key": "amplify-builds/jai-73734d5a6a556938712f-build.zip"
+        },
+        "jaiUsers": {
+          "deploymentBucketName": "amplify-jai-dev-130323-deployment",
+          "s3Key": "amplify-builds/jaiUsers-77755235495732476f43-build.zip"
+        }
+      }
+    }
+  }
+}
