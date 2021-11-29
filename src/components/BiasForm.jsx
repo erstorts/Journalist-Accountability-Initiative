@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
 import Input from "../common/input"
+import APIWrapper from "../services/API"
 
 function BiasForm({getURL}) {
 
+    const API = new APIWrapper()
     const [emailInput, setEmailInput] = useState("")
     const [articleInput, setArticleInput] = useState("")
+
     
-    const doSubmit = (event) => {
+    async function doSubmit(event) {
         console.log("Submit")
         event.preventDefault()
         setArticleInput(articleInput) 
         setEmailInput(emailInput)
-        getURL(articleInput)
-        console.log(emailInput, articleInput)
+
+        const myInit = {
+            body: {email: emailInput,
+                    article: articleInput},
+        };
+
+        try {
+            await API.post('/users', myInit)
+            const articlesResponse = await API.post('/articles', myInit)
+            getURL(articlesResponse)
+        } catch (ex) {
+            console.log(ex)
+            alert("Looks like we have an error.  Please try again.")
+        }
+        
     }
 
     const validate = () => {

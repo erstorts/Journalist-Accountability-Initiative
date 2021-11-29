@@ -15,11 +15,11 @@
       "function": {
         "jai": {
           "deploymentBucketName": "amplify-jai-dev-130323-deployment",
-          "s3Key": "amplify-builds/jai-73734d5a6a556938712f-build.zip"
+          "s3Key": "amplify-builds/jai-4a684a63646a6f355774-build.zip"
         },
         "jaiUsers": {
           "deploymentBucketName": "amplify-jai-dev-130323-deployment",
-          "s3Key": "amplify-builds/jaiUsers-77755235495732476f43-build.zip"
+          "s3Key": "amplify-builds/jaiUsers-6450486e444c50644248-build.zip"
         }
       }
     }

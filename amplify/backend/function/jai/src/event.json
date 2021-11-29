@@ -1,1 +1,4 @@
-{ "test": "event" }
+{ "test": "event",
+    "body": {"email": "me@emmettstorts.com",
+            "article": "test"}
+}

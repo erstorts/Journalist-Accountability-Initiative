@@ -1,25 +1,12 @@
 import React, { useState } from 'react';
 import BiasForm from './BiasForm';
-import APIWrapper from "../services/API"
 
 function GetBias(props) {
 
-    const API = new APIWrapper()
-    
-    async function test() {
-        const response = await API.get('/users')
-        console.log(response)
-    }
-
-    test()
-
-    const [url, setURL] = useState("")
+    const [biasMessage, setBiasMessage] = useState("")
 
     const getURL = (data) => {
-        console.log(data)
-        const biasOptions = ['Left', 'Lean Left', 'Center', 'Lean Right', 'Right']
-        const biasOutput = biasOptions[Math.floor(Math.random() * biasOptions.length)];
-        setURL(`This article's bias is ${biasOutput}`)
+        setBiasMessage(data)
     }
 
     return (
@@ -30,7 +17,7 @@ function GetBias(props) {
                     the News Feels Like?</h1>
                 </div>
                 <BiasForm getURL={getURL}/>
-                <h3>{url}</h3>
+                <h3>{biasMessage}</h3>
         </div>
     );
 }

@@ -8,43 +8,53 @@ export default class APIWrapper {
         this.apiName = 'jai';
     }
 
-    get(endpoint, body) {
-        return API.get(this.apiName, endpoint, body)
+    get(endpoint) {
+        return API.get(this.apiName, endpoint)
                     .then(response => {
-                    return response
+                        return response
                     })
                     .catch(error => {
-                    console.log(error.response);
+                        return error.response;
+                    })
+    }
+
+    head(endpoint, body) {
+        return API.head(this.apiName, endpoint, body)
+                    .then(response => {
+                        return response
+                    })
+                    .catch(error => {
+                        return error.response;
                     })
     }
 
     put(endpoint, body) {
         return API.put(this.apiName, endpoint, body)
                     .then(response => {
-                    console.log(response)
+                        return response
                     })
                     .catch(error => {
-                    console.log(error.response);
+                        return error.response;
                     })
     }
 
     post(endpoint, body) {
         return API.post(this.apiName, endpoint, body)
                     .then(response => {
-                    console.log(response)
+                        return response
                     })
                     .catch(error => {
-                    console.log(error.response);
+                        return error.response;
                     })
     }
 
     delete(endpoint, body) {
         return API.del(this.apiName, endpoint, body)
                     .then(response => {
-                    console.log(response)
+                        return response
                     })
                     .catch(error => {
-                    console.log(error.response);
+                        return error.response;
                     })
     }
 
