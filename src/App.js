@@ -5,6 +5,7 @@ import Support from './components/Support';
 import GetBias from './components/GetBias';
 import NavBar from './components/NavBar';
 
+
 function App() {
   return (
     <BrowserRouter>
